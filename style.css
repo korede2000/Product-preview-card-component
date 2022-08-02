@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0,0%,100%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayis-blue: hsl(228, 12%, 48%);
+  
+}
+body {
+  font-family: 'Montserrat', "Fraunces", sans-serif;
+  background: var(--cream);
+  color: var(--dark-grayis-blue);
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+article {
+  width: 90vw;
+  max-width: 340px;
+  margin: auto;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.mobile-img {
+  width: 100%;
+}
+.desktop-img {
+  display: none;
+}
+.content {
+  padding: 1rem 1.4rem;
+}
+.perfume {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.title, .new-price {
+  text-transform: capitalize;
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 2rem;
+}
+.content .title {
+  color: var(--very-dark-blue);
+  margin: 1rem 0;
+  line-height: 1;
+}
+.content .new-price{
+  font-size: 2rem;
+  color: var(--dark-cyan);
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.content .old-price {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  margin-left: 1rem;
+  color: var(--dark-grayis-blue);
+  place-items: center;
+}
+.desc {
+  margin: 0.9rem 0;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+.btn{
+  background: var(--dark-cyan);
+  width: 100%;
+  padding: 0.8rem;
+  color: var(--white);
+  cursor: pointer;
+  border: transparent;
+  border-radius: 7px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 14px;
+}
+.btn:hover {
+  background: var(--very-dark-blue);
+}
+
+@media screen and (min-width:620px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  .img-container img {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+  .mobile-img{
+    display: none;
+  }
+  .desktop-img{
+    display: block;
+  }
+  .content {
+    padding: 2rem;
+  }
+  
+}
